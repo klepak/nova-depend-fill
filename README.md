@@ -3,7 +3,6 @@ Fill Laravel Nova field based on value from other field.
 ![example](https://raw.githubusercontent.com/klepak/nova-depend-fill/master/docs/example.gif)
 
 ```php
-$models = Model::all();
 
 DependFill::make('Text')
     ->field(
@@ -11,8 +10,14 @@ DependFill::make('Text')
     )
     ->dependsOn(
         Select::make('Template')
-            ->options($models->pluck('title', 'id'))
+            ->options([
+                1 => 'Template 1',
+                2 => 'Template 2',
+            ])
     )
-    ->values($models->pluck('text', 'id')->toArray())`
+    ->values([
+        1 => 'template 1 text',
+        2 => 'template 2 text'
+    ])
 
 ```
