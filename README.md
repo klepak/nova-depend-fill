@@ -1,4 +1,8 @@
-Fill Laravel Nova field based on value from other field.  
+```bash
+composer require klepak/nova-depend-fill
+```
+
+Fill Laravel Nova field based on value from other field.
 
 ![example](https://raw.githubusercontent.com/klepak/nova-depend-fill/master/docs/example.gif)
 
